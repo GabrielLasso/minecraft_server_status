@@ -3,10 +3,10 @@ import net, strutils, sequtils
 const TIMEOUT = 100 # ms
 
 type ServerStatus* = object
-  online: bool
-  name: string
-  players: int
-  max_players: int
+  online*: bool
+  name*: string
+  players*: int
+  max_players*: int
 
 proc parseMinecraftResponse(response: string): (string, int, int) =
   # The response looks like this:
