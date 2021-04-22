@@ -1,6 +1,6 @@
 # Package
 
-version       = "0.1.0"
+version       = "0.1.1"
 author        = "Gabriel Lasso"
 description   = "Check minecraft server status"
 license       = "MIT"
