@@ -23,7 +23,7 @@ proc getServerStatus*(address: string, port: int = 25565, timeout: int = TIMEOUT
   try:
     socket.connect(address, Port(port))
     socket.send($((char)0xFE))
-    let data = socket.recv(256, TIMEOUT)
+    let data = socket.recv(256, timeout)
     if (data[0] == (char)0xFF):
       let parsedData = parseMinecraftResponse(data)
       result.online = true
